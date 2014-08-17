@@ -1,0 +1,82 @@
+.bg-slideshow, .bg-slideshow:after {
+    position : fixed;
+    width    : 100%;
+    height   : 100%;
+    top      : 0px;
+    left     : 0px;
+    z-index  : -1   ;
+}
+.bg-slideshow:after {
+    content    : '';
+    background : transparent url(../../images/pattern.png) repeat top left;
+}
+.bg-slideshow li {
+    list-style : none;
+}
+.bg-slideshow li span {
+    width               : 100%;
+    height              : 100%;
+    position            : absolute;
+    top                 : 0px;
+    left                : 0px;
+    color               : transparent;
+    background-size     : cover;
+    background-position : 50% 50%;
+    background-repeat   : no-repeat;
+    opacity             : 0;
+    z-index             : 0;
+    animation           : imageAnimation 30s linear infinite 0s;
+}
+
+.bg-slideshow li div {
+    z-index    : 1000;
+    position   : absolute;
+    bottom     : 30px;
+    left       : 0px;
+    width      : 100%;
+    text-align : center;
+    opacity    : 0;
+    color      : #fff;
+    animation  : titleAnimation 30s linear infinite 0s;
+}
+.bg-slideshow li div h3 {
+    font-family : 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    text-shadow : 4px 4px 6px rgba(0, 0, 0, 0.5);
+    font-size   : 50px;
+    padding     : 0;
+    line-height : 100px;
+}
+.bg-slideshow li:nth-child(1) span {
+    background-image : url(../../images/bg1.jpg)
+}
+.bg-slideshow li:nth-child(2) span {
+    background-image : url(../../images/bg2.jpg);
+    animation-delay  : 10s;
+}
+.bg-slideshow li:nth-child(3) span {
+    background-image : url(../../images/bg3.jpg);
+    animation-delay  : 20s;
+}
+
+.bg-slideshow li:nth-child(2) div {
+    animation-delay : 10s;
+}
+.bg-slideshow li:nth-child(3) div {
+    animation-delay : 20s;
+}
+
+@keyframes imageAnimation {
+    0% { opacity : 0; animation-timing-function : ease-in; }
+    8% { opacity : 1; animation-timing-function : ease-out; }
+    33% { opacity : 1 }
+    41% { opacity : 0 }
+    100% { opacity : 0 }
+}
+
+@keyframes titleAnimation {
+    0% { opacity : 0 }
+    8% { opacity : 1 }
+    33% { opacity : 1 }
+    41% { opacity : 0 }
+    100% { opacity : 0 }
+}

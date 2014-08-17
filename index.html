@@ -1,0 +1,101 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" ng-app="bdsApp">-->
+<!--<head>-->
+<!--<base href="/">-->
+<!--<meta charset="UTF-8"/>-->
+<!--<title>Tìm thông tin Mua, Bán, Cho thuê Nhà Online</title>-->
+<!--<link rel="stylesheet" href="resources/css/animation.css">-->
+<!--<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">-->
+<!--<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">-->
+<!--<link rel="stylesheet" href="resources/css/style.css">-->
+<!--<script src="bower_components/angular/angular.min.js"></script>-->
+<!--<script src="bower_components/angular-route/angular-route.min.js"></script>-->
+<!--<script src="bower_components/angular-animate/angular-animate.min.js"></script>-->
+<!--<script src="resources/js/script.js"></script>-->
+<!--</head>-->
+<!--<body ng-controller="mainController">-->
+<!--<ul class="bg-slideshow">-->
+<!--<li>-->
+<!--<span>Image 01</span>-->
+<!--<div><h3>Lựa chọn ngôi nhà phù hợp nhất với bạn</h3></div>-->
+<!--</li>-->
+<!--<li>-->
+<!--<span>Image 02</span>-->
+<!--<div><h3>Cách nhanh nhất để bán ngôi nhà của bạn</h3></div>-->
+<!--</li>-->
+<!--<li>-->
+<!--<span>Image 03</span>-->
+<!--<div><h3>Bán muốn cho thuê ngôi nhà của mình?</h3></div>-->
+<!--</li>-->
+<!--</ul>-->
+<!--<div class="container">-->
+<!--<div>-->
+<!--<div class="navbar navbar-inverse" role="navigation">-->
+<!--<ul class="nav nav-justified">-->
+<!--<li><a href="#">Home</a></li>-->
+<!--<li><a href="#sell">Bán Nhà</a></li>-->
+<!--<li><a href="#buy">Mua Nhà</a></li>-->
+<!--<li><a href="#rent">Cho Thuê Nhà</a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div ng-view>-->
+<!--</div>-->
+<!--</div>-->
+<!--<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
+<!--<script src="bower_components/angular-animate/angular-animate.min.js"></script>-->
+<!--<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en" ng-app="bdsApp">
+    <head>
+        <meta charset="UTF-8">
+        <base href="/">
+        <title>Tìm thông tin Mua, Bán, Cho thuê Nhà Online</title>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="resources/css/style.css">
+        <link rel="stylesheet" href="resources/css/animation.css">
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="resources/js/script.js"></script>
+    </head>
+    <body ng-controller="mainController">
+        <ul class="bg-slideshow">
+            <li>
+                <span>Image 01</span>
+
+                <div><h3>Lựa chọn ngôi nhà phù hợp nhất với bạn</h3></div>
+            </li>
+            <li>
+                <span>Image 02</span>
+
+                <div><h3>Cách nhanh nhất để bán ngôi nhà của bạn</h3></div>
+            </li>
+            <li>
+                <span>Image 03</span>
+
+                <div><h3>Bán muốn cho thuê ngôi nhà của mình?</h3></div>
+            </li>
+        </ul>
+        <div class="container">
+            <div class="navigation">
+                <div class="navbar navbar-inverse" role="navigation">
+                    <ul class="nav nav-justified">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#sell">Bán Nhà</a></li>
+                        <li><a href="#buy">Mua Nhà</a></li>
+                        <li><a href="#rent">Cho Thuê Nhà</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div ng-view>
+            </div>
+        </div>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
