@@ -20,6 +20,7 @@ bdsApp.config (function ($routeProvider, $locationProvider) {
     $locationProvider.hashPrefix = '!';
 });
 bdsApp.controller ('mainController', function ($scope) {
+    $scope.showDiv = false;
     $scope.countries = {
         'An Giang'    : {
             'Maharashtra'   : ['Pune', 'Mumbai', 'Nagpur', 'Akola'],

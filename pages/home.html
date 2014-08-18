@@ -1,30 +1,135 @@
 <div class="row">
+    <!--    CLICK SHOW SEARCH INFO DIALOG-->
+    <div class=" col-sm-12 center-block" style="margin-top: 100px">
+        <button class="btn btn-default btn-lg center-block" data-toggle="modal" data-target="#searchInfo">Tìm Kiếm
+        </button>
+    </div>
+    <!--    MODAL FOR SEARCH INFO   -->
     <div class="col-sm-6 col-sm-offset-3">
-        <form>
-            <div class="form-group">
-                <label for="country">Tỉnh:</label>
-                <select id="country" class="form-control" ng-model="states"
-                        ng-options="country for (country, states) in countries">
-                    <option value=''>Lựa chọn</option>
-                </select>
+        <div class="modal fade" id="searchInfo">
+            <div class="modal-dialog modal-lg" style="top: 15%">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4>Tìm kiếm</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="country">Tỉnh:</label>
+                                <select id="country" class="form-control" ng-model="states"
+                                        ng-options="country for (country, states) in countries">
+                                    <option value=''>Lựa chọn</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="state">States:</label>
+                                <select id="state" class="form-control" ng-disabled="!states" ng-model="cities"
+                                        ng-options="state for (state,city) in states">
+                                    <option value=''>Lựa chọn</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City:</label>
+                                <select id="city" class="form-control" ng-disabled="!cities || !states" ng-model="city"
+                                        ng-options="city for city in cities">
+                                    <option value=''>Lựa chọn</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="center-block">
+                            <button type="button" class="btn btn-default center-block">Gửi</span></button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="state">States:</label>
-                <select id="state" class="form-control" ng-disabled="!states" ng-model="cities"
-                        ng-options="state for (state,city) in states">
-                    <option value=''>Lựa chọn</option>
-                </select>
+        </div>
+    </div>
+    <!--    MODAL FOR SUBMIT INFO   -->
+    <div class="col-sm-6 col-sm-offset-3">
+        <div class="modal fade" id="submitInfo">
+            <div class="modal-dialog modal-lg" style="top: 15%">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="text-center text-info text">Đăng Thông Tin</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!--    FORM    -->
+                        <form class="form-horizontal" role="form">
+                            <!--    HOUSE AREA  -->
+                            <div class="form-group">
+                                <label for="address" class="col-sm-2 control-label center-block">Địa Chỉ:</label>
+
+                                <div class="col-sm-10">
+                                    <input id="address" type="text" class="form-control input-lg">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <!--    HOUSE AREA  -->
+                                <label for="houseArea" class="col-sm-2 control-label center-block">Diện Tích
+                                    Nhà:</label>
+
+                                <div class="col-sm-4">
+                                    <div class="input-group">
+                                        <input id="houseArea" type="text" class="form-control"><span
+                                            class="input-group-addon">m&#178;</span>
+                                    </div>
+                                </div>
+                                <!--    LAND AREA   -->
+                                <label for="landArea" class="col-sm-2 control-label center-block">Diện Tích
+                                    Đất:</label>
+
+                                <div class="col-sm-4">
+                                    <div class="input-group">
+                                        <input id="landArea" type="text" class="form-control"><span
+                                            class="input-group-addon">m&#178;</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--    FLOOR COUNT AND ROOM COUNT-->
+                            <div class="form-group">
+                                <label for="dk-count" class="col-sm-2 control-label center-block">Số Phòng :</label>
+
+                                <div class="col-sm-4">
+                                    <select id="dk-count" class="form-control" ng-model="submitForm.dkCount">
+                                        <option value=''>Lựa chọn</option>
+                                        <option value="1">1 DK</option>
+                                        <option value="2">2 DK</option>
+                                        <option value="3">3 DK</option>
+                                        <option value="4">4 DK</option>
+                                    </select>
+                                </div>
+                                <label for="floor-count" class="col-sm-2 control-label center-block">Số Tầng: </label>
+
+                                <div class="col-sm-4">
+                                    <select id="floor-count" class="form-control" ng-model="submitForm.floorCount">
+                                        <option value=''>Lựa chọn</option>
+                                        <option value="1">1 Tầng</option>
+                                        <option value="2">2 Tầng</option>
+                                        <option value="3">3 Tầng</option>
+                                        <option value="4">4 Tầng</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="center-block">
+                            <button type="button" class="btn btn-default center-block">Gửi</span></button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="city">City:</label>
-                <select id="city" class="form-control" ng-disabled="!cities || !states" ng-model="city"
-                        ng-options="city for city in cities">
-                    <option value=''>Lựa chọn</option>
-                </select>
-            </div>
-            <div class="center-block">
-                <button type="submit" class="btn btn-default center-block">Gửi</span></button>
-            </div>
-        </form>
+        </div>
+    </div>
+    <!--    CLICK SHOW SUBMIT INFO DIALOG   -->
+    <div class="col-sm-12 center-block" style="margin-top: 100px">
+        <button class="btn btn-default btn-lg center-block" data-toggle="modal" data-target="#submitInfo">Đăng Thông
+            Tin
+        </button>
     </div>
 </div>
